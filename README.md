@@ -17,22 +17,48 @@ A lightweight Java scheduling framework with custom annotations and high availab
 
 ## Quick Start
 
-### Building
+### Add to your project
+
+Add the following dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>io.cooligc</groupId>
+    <artifactId>schedule-it</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### Create a scheduled task
+
+```java
+package com.example;
+
+import io.cooligc.scheduleit.Job;
+import io.cooligc.scheduleit.ScheduledTask;
+import io.cooligc.scheduleit.SchedulerService;
+
+@Job
+public class MyTasks {
+    @ScheduledTask(fixedDelay = 5000)
+    public void myTask() {
+        System.out.println("Task executed!");
+    }
+}
+```
+
+### Run the scheduler
+
+```java
+SchedulerService scheduler = new SchedulerService();
+scheduler.start();
+scheduler.registerJobs();
+```
+
+### Building from source
 
 ```bash
 mvn clean package
-```
-
-### Running
-
-```bash
-java -jar target/schedule-it-1.0-SNAPSHOT.jar
-```
-
-Or for development:
-
-```bash
-mvn exec:java -Dexec.mainClass="io.cooligc.scheduleit.Main"
 ```
 
 ## Usage
@@ -85,6 +111,16 @@ Tasks can specify a `poolName` to use different thread pools. Default pool is "d
 - **LockManager**: Handles distributed locking using database
 - **@ScheduledTask**: Annotation for method-level scheduling
 - **@Job**: Annotation for class-level job marking
+
+## Publishing to Maven Central
+
+To release a new version to Maven Central:
+
+1. Update version in `pom.xml` to a non-SNAPSHOT version
+2. Create a GPG key and distribute to keyservers
+3. Configure Maven settings with OSSRH credentials
+4. Run: `mvn clean deploy -P release`
+5. Login to OSSRH and release the staged artifacts
 
 ## Contributing
 
