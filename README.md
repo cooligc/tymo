@@ -16,7 +16,7 @@
     <img src="https://github.com/cooligc/tymo/actions/workflows/gh-pages.yml/badge.svg" alt="GitHub Pages">
   </a>
   <a href="https://search.maven.org/artifact/io.cooligc/tymo">
-    <img src="https://img.shields.io/maven-central/v/io.cooligc/tymo" alt="Maven Central">
+    <img src="https://img.shields.io/badge/Maven%20Central-1.0.0-blue.svg" alt="Maven Central">
   </a>
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
