@@ -1,6 +1,27 @@
 # Tymo
 
-A lightweight Java scheduling framework with custom annotations and high availability support using ScheduledThreadPoolExecutor and database locking.
+<p align="center">
+  <img src="logo.svg" alt="Tymo Logo" width="120" height="120">
+</p>
+
+<p align="center">
+  <strong>A lightweight Java scheduling framework with custom annotations and high availability support</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/cooligc/tymo/actions/workflows/ci.yml">
+    <img src="https://github.com/cooligc/tymo/actions/workflows/ci.yml/badge.svg" alt="Build Status">
+  </a>
+  <a href="https://github.com/cooligc/tymo/actions/workflows/gh-pages.yml">
+    <img src="https://github.com/cooligc/tymo/actions/workflows/gh-pages.yml/badge.svg" alt="GitHub Pages">
+  </a>
+  <a href="https://search.maven.org/artifact/io.cooligc/tymo">
+    <img src="https://img.shields.io/maven-central/v/io.cooligc/tymo" alt="Maven Central">
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
+  </a>
+</p>
 
 ## Features
 

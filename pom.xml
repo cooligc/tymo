@@ -31,9 +31,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/cooligc/schedule-it.git</connection>
-        <developerConnection>scm:git:ssh://github.com:cooligc/schedule-it.git</developerConnection>
-        <url>https://github.com/cooligc/schedule-it</url>
+        <connection>scm:git:git://github.com/cooligc/tymo.git</connection>
+        <developerConnection>scm:git:ssh://github.com/cooligc/tymo.git</developerConnection>
+        <url>https://github.com/cooligc/tymo</url>
     </scm>
     <distributionManagement>
         <snapshotRepository>
