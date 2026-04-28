@@ -1,4 +1,4 @@
-# Schedule It
+# Tymo
 
 A lightweight Java scheduling framework with custom annotations and high availability support using ScheduledThreadPoolExecutor and database locking.
 
@@ -24,7 +24,7 @@ Add the following dependency to your `pom.xml`:
 ```xml
 <dependency>
     <groupId>io.cooligc</groupId>
-    <artifactId>schedule-it</artifactId>
+    <artifactId>tymo</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```

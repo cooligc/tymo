@@ -6,11 +6,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.cooligc</groupId>
-    <artifactId>schedule-it</artifactId>
+    <artifactId>tymo</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>Schedule It</name>
+    <name>Tymo</name>
     <description>A lightweight Java scheduling framework with custom annotations and high availability support</description>
     <url>https://cooligc.github.io/schedule-it/</url>
 

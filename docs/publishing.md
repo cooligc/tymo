@@ -1,6 +1,6 @@
 # Publishing to Maven Central
 
-This guide explains how to publish Schedule It to Maven Central.
+This guide explains how to publish Tymo to Maven Central.
 
 ## Prerequisites
 
