@@ -1,7 +1,7 @@
 # Tymo
 
 <p align="center">
-  <img src="logo.svg" alt="Tymo Logo" width="120" height="120">
+  <img src="logo.png" alt="Tymo Logo" width="120" height="120">
 </p>
 
 <p align="center">
