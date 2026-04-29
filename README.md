@@ -55,9 +55,8 @@ Add the following dependency to your `pom.xml`:
 ```java
 package com.example;
 
-import io.cooligc.scheduleit.Job;
-import io.cooligc.scheduleit.ScheduledTask;
-import io.cooligc.scheduleit.SchedulerService;
+import io.cooligc.tymo.Job;
+import io.cooligc.tymo.ScheduledTask;
 
 @Job
 public class MyTasks {
@@ -76,6 +75,15 @@ scheduler.start();
 scheduler.registerJobs();
 ```
 
+### Example application
+
+An example app is available in the `example/` directory.
+
+```bash
+cd example
+mvn exec:java
+```
+
 ### Building from source
 
 ```bash
@@ -89,7 +97,7 @@ mvn clean package
 Create a class annotated with `@Job` and add methods annotated with `@ScheduledTask`:
 
 ```java
-package io.cooligc.scheduleit;
+package io.cooligc.tymo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
