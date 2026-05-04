@@ -50,6 +50,25 @@ Add the following dependency to your `pom.xml`:
 </dependency>
 ```
 
+If the artifact is published to Maven Central, no extra repository configuration is required.
+
+If you are consuming a snapshot build before it is released, add the Sonatype OSSRH snapshots repository:
+
+```xml
+<repositories>
+  <repository>
+    <id>ossrh-snapshots</id>
+    <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+    <releases>
+      <enabled>false</enabled>
+    </releases>
+    <snapshots>
+      <enabled>true</enabled>
+    </snapshots>
+  </repository>
+</repositories>
+```
+
 ### Create a scheduled task
 
 ```java
@@ -81,7 +100,7 @@ An example app is available in the `example/` directory.
 
 ```bash
 cd example
-mvn exec:java
+mvn -DskipTests exec:java
 ```
 
 ### Building from source
@@ -143,13 +162,38 @@ Tasks can specify a `poolName` to use different thread pools. Default pool is "d
 
 ## Publishing to Maven Central
 
-To release a new version to Maven Central:
+To release a new version to Maven Central using the configured release plugins:
 
-1. Update version in `pom.xml` to a non-SNAPSHOT version
-2. Create a GPG key and distribute to keyservers
-3. Configure Maven settings with OSSRH credentials
-4. Run: `mvn clean deploy -P release`
-5. Login to OSSRH and release the staged artifacts
+1. Update the version in `pom.xml` to a non-SNAPSHOT version.
+2. Create and configure a GPG key for artifact signing.
+3. Ensure your Maven `settings.xml` contains OSSRH credentials and GPG configuration.
+4. Run the release goals:
+
+```bash
+mvn release:prepare release:perform -P release
+```
+
+5. If you need to set a specific version first, use:
+
+```bash
+mvn versions:set -DnewVersion=1.0.1
+```
+
+6. Login to OSSRH and release the staged artifacts if the process does not auto-release.
+
+### Repository details
+
+The published JAR is intended for Maven Central. Consumers can import it with the standard Maven Central repository settings:
+
+```xml
+<repository>
+  <id>central</id>
+  <name>Maven Central</name>
+  <url>https://repo1.maven.org/maven2/</url>
+</repository>
+```
+
+In most Maven setups, this repository is configured by default, so only the dependency block is required.
 
 ## Contributing
 

@@ -7,7 +7,7 @@ This example demonstrates how a Java developer can use the Tymo scheduling frame
 1. Install the library locally:
 
 ```bash
-cd /Users/cooligc/Documents/codes/schedule-it
+cd ..
 mvn clean install -DskipTests
 ```
 
@@ -15,7 +15,7 @@ mvn clean install -DskipTests
 
 ```bash
 cd example
-mvn exec:java
+mvn -DskipTests exec:java
 ```
 
 ## What this example shows

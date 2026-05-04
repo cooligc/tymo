@@ -12,4 +12,5 @@ import java.lang.annotation.Target;
 public @interface ScheduledTask {
     long fixedDelay() default -1;
     String poolName() default "default";
+    long maxLockTime() default 30000;
 }
