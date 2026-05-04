@@ -195,6 +195,20 @@ The published JAR is intended for Maven Central. Consumers can import it with th
 
 In most Maven setups, this repository is configured by default, so only the dependency block is required.
 
+## Creating an issue
+
+If you find a bug, want a feature, or need improvement in the scheduler, open an issue using the templates in `.github/ISSUE_TEMPLATE/`.
+
+- Use **Bug report** for unexpected behavior or defects.
+- Use **Feature request** for enhancements or new capabilities.
+
+Provide:
+
+- a clear summary
+- steps to reproduce (for bugs)
+- expected vs actual behavior
+- any relevant logs, configuration, or environment details
+
 ## Contributing
 
 1. Fork the repository
